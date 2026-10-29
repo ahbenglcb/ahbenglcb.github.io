@@ -1,0 +1,88 @@
+/* Small adaptations of the supplied Hugo Academic template. */
+:root { --brand-orange: #E77500; }
+a, a:hover, a:focus { color: var(--brand-orange); }
+#navbar-main .navbar-brand, #navbar-main .navbar-nav .nav-link { color: var(--brand-orange); }
+#navbar-main .navbar-nav .nav-link.active { color: var(--brand-orange) !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { overflow-wrap: break-word; }
+.site-layout { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 64px; align-items: start; padding-top: 48px; padding-bottom: 40px; }
+.profile-sidebar { position: sticky; top: 100px; }
+#profile { padding: 0; }
+.main-content { min-width: 0; }
+.content-section { margin-bottom: 48px; }
+.content-section:last-child { margin-bottom: 0; }
+.section-title { margin: 0 0 22px; padding-bottom: 12px; border-bottom: 1px solid #d9dfe4; font-size: 1.45rem; font-weight: 700; line-height: 1.35; }
+.portrait-title h1 { font-size: 1.75em; font-weight: 300; margin: 20px 0 10px; }
+.portrait-title h3 { font-size: 1rem; line-height: 1.5; }
+.university-link { display: inline-flex; align-items: center; gap: 8px; }
+.university-logo { width: 28px; height: 36px; flex: 0 0 28px; object-fit: contain; }
+.profile-photo { overflow: hidden; background: #eef0f3; }
+.profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; transform: scale(1.15); transform-origin: 50% 60%; }
+.profile-icon { width: 1.7rem; height: 1.7rem; display: block; }
+.network-icon { display: flex; justify-content: center; align-items: center; gap: 16px; padding: 0; }
+.network-icon li { display: block; margin: 0; }
+.network-icon a { display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+.cv-icon { font-size: 1.45rem; font-weight: 700; line-height: 1; }
+.profile-details { margin-top: 30px; }
+.education-list { list-style: none; padding: 0; font-size: .9rem; }
+.education-list li { display: flex; gap: 10px; margin-bottom: 12px; }
+.education-icon { width: 25px; height: 25px; flex: 0 0 25px; margin-top: 4px; }
+.education-list p { margin: 0; }
+.education-list .institution { color: #666; font-size: .75rem; line-height: 1.5; }
+.paper-entry + .paper-entry { margin-top: 30px; }
+.paper-entry .article-title { margin: 0 0 8px; font-size: 1.05rem; font-weight: 700; line-height: 1.5; }
+.paper-coauthors { margin: 0 0 12px; color: #555; font-size: .9rem; line-height: 1.5; }
+.paper-entry .article-style { font-size: .95rem; }
+.paper-entry .article-style p:last-child { margin-bottom: 0; }
+.paper-actions { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+.paper-abstract { margin-top: 16px; }
+.paper-abs, .paper-pdf { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; margin: 0; padding: 3px 10px; border: 1px solid var(--brand-orange); border-radius: 3px; background: transparent; color: var(--brand-orange); font-family: inherit; font-size: .75rem; font-weight: inherit; line-height: 1.5; text-decoration: none; cursor: pointer; }
+.paper-abs:hover, .paper-pdf:hover { background: var(--brand-orange); color: #222; }
+.paper-abs:focus-visible, .paper-pdf:focus-visible { outline: 3px solid var(--brand-orange); outline-offset: 4px; }
+.course-list { list-style: none; padding: 0; margin: 0 0 36px; font-size: .9rem; }
+.course-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 8px 0; }
+.course-list li > span:last-child { white-space: nowrap; color: #666; }
+.contact-list { list-style: none; padding: 0; margin: 0; }
+.contact-list li { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 28px; }
+.contact-list svg { width: 28px; height: 28px; flex: 0 0 28px; margin-top: 4px; }
+.contact-list address { font-style: normal; margin: 0; }
+.site-navigation { display: flex; flex-direction: row; margin-right: auto; }
+.menu-toggle { display: none; border: 0; padding: 10px; background: transparent; color: #34495e; cursor: pointer; }
+.site-footer { margin: 0; padding: 40px 0; text-align: center; }
+.site-footer p { margin: 0 0 8px; }
+.back-to-top { font-size: .75rem; }
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 2000; background: #fff; padding: 12px 20px; }
+.skip-link:focus { top: 8px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--brand-orange); outline-offset: 4px; }
+@media (max-width: 991.98px) {
+  html { scroll-padding-top: 68px; }
+  .site-layout { display: block; padding-top: 32px; }
+  .profile-sidebar { position: static; margin-bottom: 40px; }
+  #navbar-main .container { position: relative; }
+  .menu-toggle { display: flex; }
+  #navbar-main .site-navigation { position: absolute; top: 100%; left: 0; right: 0; display: flex; flex-direction: column; margin: 0; padding: 8px 24px 16px; background: #fff; box-shadow: 0 6px 10px rgba(0,0,0,.08); }
+  .js #navbar-main .site-navigation { display: none; }
+  .js #navbar-main .site-navigation.is-open { display: flex; }
+  #navbar-main .navbar-brand { margin-right: auto; }
+  #navbar-main .nav-link { padding: 10px 0; }
+  #profile { padding-top: 0; }
+  .section-title { font-size: 1.35rem; }
+}
+@media (max-width: 575.98px) {
+  .container { padding-left: 24px; padding-right: 24px; }
+  .profile-details > div + div { margin-top: 20px; }
+  .course-list li { gap: 12px; }
+  .contact-list li { gap: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .home-section { animation: none; } }
+
+
+
+
+
+
+
+
+
+
+
